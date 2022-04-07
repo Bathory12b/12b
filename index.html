@@ -13,12 +13,17 @@
         <img id = "kep" style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: 
         hsl(0, 0%, 90%);transition: background-color 300ms;" src="tablo2.jpg" width="542" height="720">
         <div class = "center-h">
-            <button onclick="myFunction()"> Vicces tablo </button>
+            <button onclick="myFunction()" style = "margin: 10px; background-color: bisque;"> Masik tablo </button>
         </div>
     </body>
     <script>
+        const image = ["tablo2.jpg", "thisisbait.jpg"];
+        let imgnr = 0;
         function myFunction(){
-            document.getElementById("kep").src="thisisbait.jpg";
+            imgnr++;
+            if(imgnr == 2)
+                imgnr = 0;
+            document.getElementById("kep").src = image[imgnr];
         }
     </script>
 </html>
